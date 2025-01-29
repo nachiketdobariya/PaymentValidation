@@ -1,5 +1,6 @@
 import { FormData } from '@/types/formData';
 import { useEffect, useMemo, useState } from 'react';
+
 export const usePayment = () => {
 	const [formData, setFormData] = useState<FormData>({
 		cardNumber: '',
@@ -21,7 +22,7 @@ export const usePayment = () => {
 
 	const validateForm = () => {
 		const { cardNumber, cardName, expiryMonth, expiryYear, cvv } = formData;
-		let newErrors: FormData = {
+		const newErrors: FormData = {
 			cardNumber: '',
 			cardName: '',
 			expiryMonth: '',
@@ -69,12 +70,12 @@ export const usePayment = () => {
 		validateForm();
 	}, [formData]);
 
-	const handleChange = (e: any) => {
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
 		setFormData((prev) => ({ ...prev, [name]: value }));
 	};
 
-	const handleSubmit = (e: any) => {
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		if (isSubmitEnabled) {
 			alert('Form Submitted Successfully!');
