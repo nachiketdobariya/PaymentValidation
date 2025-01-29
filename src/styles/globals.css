@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--background: #ffffff;
+	--foreground: #171717;
+}
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+p,
+span {
+	color: white;
+}
+
+.layout-column {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Card Styles */
+.card {
+	width: 650px;
+	border-radius: 10px;
+	box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4);
+}
+
+.debit-card-stripe {
+	height: 45px;
+	background-color: black;
+	margin-top: 15px;
+}
+
+/* Form Styles */
+form {
+	width: 100%;
+	max-width: 650px;
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+input:focus {
+	outline: none;
+	border-color: #007bff;
+	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+	width: 100%;
+	padding: 10px;
+	font-size: 1rem;
+	background-color: #28a745;
+	color: black;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:disabled {
+	background-color: #ccc;
+	color: #3d3d3d;
+	cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+	background-color: #218838;
+}
