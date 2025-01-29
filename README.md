@@ -76,7 +76,7 @@ The application performs the following validations:
 
 ### Initial Validation  
 <div style="display: flex; overflow-x: auto; white-space: nowrap; gap: 10">
-  <img className="w-full" src="screenshot/Screenshot2.png" alt="Screenshot 1">
+  <img className="w-full" src="screenshot/Screenshot1.png" alt="Screenshot 1">
 </div>
 
 ### Successful Form Submission  
