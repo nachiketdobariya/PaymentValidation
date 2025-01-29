@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏦 Payment Card Validation Application
 
-## Getting Started
+This project is a **Payment Card Validation** web application built using **Next.js** and deployed on **Vercel**. The app provides an interactive interface for users to validate payment card details, including card number, cardholder name, expiration month and year, and CVV.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- ✅ **Real-time Validation**: Provides instant feedback for invalid inputs (e.g., invalid card number, invalid CVV).  
+- 🎴 **Dynamic Card Display**: Updates the card preview dynamically based on user input.  
+- ♿ **Accessibility**: Implements accessible error messages for each input field.  
+- 📱 **Responsive Design**: Optimized for all devices, including mobile and desktop.  
+- 🚀 **Smooth Deployment**: Hosted on **Vercel** for seamless accessibility.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- ⚛️ **Next.js**: Framework for building React applications with server-side rendering.  
+- 🖼️ **React.js**: UI library for building interactive user interfaces.  
+- 🎨 **Tailwind CSS**: Styling the application.  
+- 🌍 **Vercel**: Deployment platform for hosting Next.js applications.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Project Demo 🚀
 
-## Learn More
+You can access the live application here: https://payment-card-validation.vercel.app
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Setup & Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Follow the steps below to run the project locally:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/nachiketdobariya/PaymentValidation.git
+   ```
 
-## Deploy on Vercel
+2. Navigate to the project directory:
+   ```bash
+   cd PaymentValidation
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Install dependencies:
+   ```bash
+   yarn install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Run the development server:
+   ```bash
+   yarn dev
+   ```
+
+5. Open the app in your browser at `http://localhost:3000` or `http://10.0.0.20:3000`
+
+
+## 📝 Validations
+
+The application performs the following validations:
+
+1. **Card Number**:  
+   - 🔢 Must be exactly 16 digits.  
+   - ❌ Displays an error if invalid: `Invalid Card Number`.  
+
+2. **Cardholder Name**:  
+   - 🧑‍💻 Must contain only English letters.  
+   - ❌ Displays an error if invalid: `Invalid Card Name`.  
+
+3. **Expiration Month**:  
+   - 📅 Must be a two-digit number (01–12).  
+   - ❌ Displays an error if invalid: `Invalid Month`.  
+
+4. **Expiration Year**:  
+   - 📅 Must be a four-digit number between the current year and up to 3 years in the future.  
+   - ❌ Displays an error if invalid: `Invalid Year`.  
+
+5. **CVV**:  
+   - 🔐 Must be exactly 3 digits.  
+   - ❌ Displays an error if invalid: `Invalid CVV`.  
+
+## 📸 Screenshots
+
+### Initial Validation  
+<div style="display: flex; overflow-x: auto; white-space: nowrap; gap: 10">
+  <img className="w-full" src="screenshot/Screenshot2.png" alt="Screenshot 1">
+</div>
+
+### Successful Form Submission  
+<div style="display: flex; overflow-x: auto; white-space: nowrap; gap: 10">
+  <img className="w-full" src="screenshot/Screenshot2.png" alt="Screenshot 2">
+</div>
+
+---
+
+Feel free to modify this as required! 😊
